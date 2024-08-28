@@ -13,13 +13,13 @@ config <-source("config.R")
 list(
   ### dat_ste ####
   tar_target(dat_ste,
-             load_ste(infile_ste = file.path(indir_ste, "STE_2016_AUST.shp"))
+             load_dat_ste(infile_ste = file.path(indir_ste, "STE_2016_AUST.shp"))
   )
   ,
   #### dat_spei ####
   tar_target(dat_spei,
-             load_spei(
-               infile = file.path(indir_spei, "spei06.nc")
+             load_dat_spei(
+               infile = file.path(indir_spei, "spei06_20240829.nc")
                ,
                in_ste = dat_ste
                )
