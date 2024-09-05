@@ -9,7 +9,7 @@ do_fig_map_signif_defecit <- function(
   # QC the 2023 pattern
   dat <- dat_drt_severity
   dat2 <- dat[substr(dat$date,1,4) =="2023" & substr(dat$date,6,7) %in% c('08', '09', '10'),]
-  dat2[gid == 480,]
+  # dat2[gid == 480,]
   dat2 <- dat2[,.(spei = mean(SPEI)), by = c("gid", 'lon', 'lat')]
   setDF(dat2)
   ## Notice work to align output of rasterize

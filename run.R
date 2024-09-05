@@ -1,4 +1,5 @@
 if(!dir.exists("figures_and_tables")) dir.create("figures_and_tables")
+if(!dir.exists("working_ivan")) dir.create("working_ivan")
 
 library(targets)
 tar_source()

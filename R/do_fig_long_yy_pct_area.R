@@ -5,7 +5,7 @@ do_fig_long_yy_pct_area <- function(
   ,
   indat0 = dat_mrg_spei_ste
   ,
-  outfile
+  outfile = "figures_and_tables/dat_long_yy_pct_area_V20240829.png"
 ){
   lwdi = 2.5
   toplot <- toplot[year < 2024]
@@ -37,7 +37,7 @@ do_fig_long_yy_pct_area <- function(
   ste_todo <- ste_todo[c(1:3,5:9)]
   ste_todo
   
-  with(indat[STE_NAME16 == ste_todo[1]], plot(year, value, type = "l", col = "darkblue", axes = T, ylab = '', ylim = c(-1.7,1.7)))
+  with(indat[STE_NAME16 == ste_todo[1]], plot(year, value, type = "l", col = 1, axes = T, ylab = '', ylim = c(-1.7,1.7)))
   abline(0,0)
   for(i in 2:8){
     # i = 2
